@@ -1,0 +1,38 @@
+# Arquivos de controle de versão
+.git
+.gitignore
+.gitattributes
+
+# IDEs
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.class
+
+# Build
+target/
+build/
+*.jar
+*.war
+
+# Logs
+logs/
+*.log
+
+# Outros
+.github
+README.md
+HELP.md
+mvnw
+mvnw.cmd
+.mvn
+.m2
+node_modules
+npm-debug.log
+.gradle
+.env
+.env.local
