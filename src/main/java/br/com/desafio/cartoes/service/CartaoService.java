@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -37,7 +36,7 @@ public class CartaoService {
         // Converte CartaoOferta para CartaoResponseDTO
         List<CartaoResponseDTO> cartoesResponse = cartoesAprovados.stream()
             .map(this::converterParaResponse)
-            .collect(Collectors.toList());
+            .toList();
         
         // Monta resposta
         SolicitacaoResponseDTO resposta = SolicitacaoResponseDTO.builder()

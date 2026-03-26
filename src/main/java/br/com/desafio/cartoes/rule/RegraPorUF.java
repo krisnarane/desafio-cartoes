@@ -6,7 +6,6 @@ import br.com.desafio.cartoes.domain.model.Cliente;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class RegraPorUF implements ElegibilidadeRule {
@@ -23,7 +22,7 @@ public class RegraPorUF implements ElegibilidadeRule {
             // Senão (< 25 ou >= 30) em SP, remove Parceiros
             return cartoes.stream()
                 .filter(c -> c.getTipoCartao() != TipoCartao.CARTAO_DE_PARCEIROS)
-                .collect(Collectors.toList());
+                .toList();
         }
         // Fora de SP, permite todos
         return cartoes;

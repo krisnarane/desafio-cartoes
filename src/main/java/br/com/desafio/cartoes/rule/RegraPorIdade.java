@@ -6,8 +6,6 @@ import br.com.desafio.cartoes.domain.model.Cliente;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
-
 @Component
 public class RegraPorIdade implements ElegibilidadeRule {
     
@@ -18,7 +16,7 @@ public class RegraPorIdade implements ElegibilidadeRule {
         if (idade >= 18 && idade < 25) {
             return cartoes.stream()
                 .filter(c -> c.getTipoCartao() == TipoCartao.CARTAO_SEM_ANUIDADE)
-                .collect(Collectors.toList());
+                .toList();
         }
         // Se não (idade >= 25), permite todos
         return cartoes;
