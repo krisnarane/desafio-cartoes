@@ -15,8 +15,9 @@ public class RegraPorUF implements ElegibilidadeRule {
     public List<CartaoOferta> aplicar(Cliente cliente, List<CartaoOferta> cartoes) {
         // SP tem restrições especiais
         if ("SP".equals(cliente.getUf())) {
+            int idade = cliente.calcularIdade();
             // Se entre 25 e 30 anos em SP, permite todos
-            if (cliente.getIdade() >= 25 && cliente.getIdade() < 30) {
+            if (idade >= 25 && idade < 30) {
                 return cartoes;
             }
             // Senão (< 25 ou >= 30) em SP, remove Parceiros

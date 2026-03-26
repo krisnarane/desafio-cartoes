@@ -21,11 +21,6 @@ public class ClienteRequestDTO {
     @NotBlank(message = "CPF é obrigatório")
     private String cpf;
     
-    @NotNull(message = "Idade é obrigatória")
-    @Min(value = 0, message = "Idade não pode ser negativa")
-    @Max(value = 150, message = "Idade inválida")
-    private Integer idade;
-    
     @NotNull(message = "Data de nascimento é obrigatória")
     @PastOrPresent(message = "Data de nascimento não pode ser no futuro")
     private LocalDate dataNascimento;

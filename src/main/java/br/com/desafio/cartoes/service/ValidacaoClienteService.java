@@ -75,7 +75,6 @@ public class ValidacaoClienteService {
         return Cliente.builder()
             .nome(dto.getNome())
             .cpf(dto.getCpf())
-            .idade(dto.getIdade())
             .dataNascimento(dto.getDataNascimento())
             .uf(dto.getUf())
             .rendaMensal(dto.getRendaMensal())

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.Period;
 
 @Data
 @NoArgsConstructor
@@ -16,10 +17,16 @@ public class Cliente {
     
     private String nome;
     private String cpf;
-    private Integer idade;
     private LocalDate dataNascimento;
     private String uf;
     private BigDecimal rendaMensal;
     private String email;
     private String telefoneWhatsapp;
+    
+    /**
+     * Calcula a idade do cliente baseado na data de nascimento
+     */
+    public int calcularIdade() {
+        return Period.between(this.dataNascimento, LocalDate.now()).getYears();
+    }
 }

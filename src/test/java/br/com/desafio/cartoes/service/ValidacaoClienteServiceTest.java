@@ -150,7 +150,6 @@ class ValidacaoClienteServiceTest {
 
         assertThat(cliente.getNome()).isEqualTo(dto.getNome());
         assertThat(cliente.getCpf()).isEqualTo(dto.getCpf());
-        assertThat(cliente.getIdade()).isEqualTo(dto.getIdade());
         assertThat(cliente.getDataNascimento()).isEqualTo(dto.getDataNascimento());
         assertThat(cliente.getUf()).isEqualTo(dto.getUf());
         assertThat(cliente.getRendaMensal()).isEqualByComparingTo(dto.getRendaMensal());
