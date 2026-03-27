@@ -30,7 +30,12 @@ public class ElegibilidadeService {
         // Carrega cartões ativos
         List<CartaoOferta> cartoes = cartaoRepository.findByAtivoTrue();
         log.debug("Cartões carregados: {}", cartoes.size());
-        
+
+        if (cartoes.isEmpty()) {
+            log.info("Nenhum cartão ativo encontrado para processar");
+            return cartoes;
+        }
+
         // Aplicar cada regra sucessivamente
         for (ElegibilidadeRule rule : regras) {
             int antes = cartoes.size();

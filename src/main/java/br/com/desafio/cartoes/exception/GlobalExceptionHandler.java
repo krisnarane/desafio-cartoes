@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -35,6 +36,20 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(problem);
     }
     
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ProblemDetail> handleHttpMessageNotReadable(
+            HttpMessageNotReadableException ex) {
+
+        log.warn("Corpo da requisição inválido ou ausente");
+
+        ProblemDetail problem = ProblemDetail.forStatus(HttpStatus.BAD_REQUEST);
+        problem.setTitle("Bad Request");
+        problem.setDetail("Corpo da requisição inválido ou ausente");
+        problem.setProperty("timestamp", System.currentTimeMillis());
+
+        return ResponseEntity.badRequest().body(problem);
+    }
+
     /**
      * Trata erros de negócio (422 ou 400)
      * cliente menor de 18, renda inválida, etc.
