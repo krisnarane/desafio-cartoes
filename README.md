@@ -67,7 +67,7 @@ Em instituições financeiras como Itaú:
 - Maven 3.9+
 - Docker (opcional, para container)
 
-### Sem Docker (Desenvolvimento)
+### Desenvolvimento (Maven + H2 em-memória) ⭐ Recomendado
 
 ```bash
 # 1. Clonar repositório
@@ -76,12 +76,18 @@ cd cartoes
 # 2. Compilar
 mvn clean compile
 
-# 3. Executar aplicação
+# 3. Executar aplicação (Profile DEV ativado por padrão)
 mvn spring-boot:run
 
 # 4. Rodar testes (em outro terminal)
 mvn test
 ```
+
+✅ **Dev Profile (ativado automaticamente):**
+- ❌ Docker Compose NÃO sobe
+- ✅ Apenas Maven na porta 8080
+- ✅ H2 banco em-memória
+- ✅ Logging DEBUG ativado
 
 **A aplicação estará acessível em:**
 
@@ -90,18 +96,120 @@ mvn test
 | **API REST** | http://localhost:8080 |
 | **Swagger UI** | http://localhost:8080/swagger-ui.html |
 | **OpenAPI Spec** | http://localhost:8080/v3/api-docs |
-| **H2 Console** | http://localhost:8080/h2-console (dev only) |
+| **H2 Console** | http://localhost:8080/h2-console |
 | **Health Check** | http://localhost:8080/actuator/health |
 
-### Com Docker (Produção)
+### Produção (Docker Compose) 🐳
 
 ```bash
-# Opção 1: Docker Compose (recomendado)
+# Build com profile PROD (inclui spring-boot-docker-compose)
+mvn clean package -P prod
+
+# Subir container
 docker-compose up -d
 
-# Opção 2: Build manual
-docker build -t cartoes-api:latest .
-docker run -p 8080:8080 -v logs:/app/logs cartoes-api:latest
+# Ver logs em tempo real
+docker-compose logs -f cartoes-api
+
+# Parar
+docker-compose down
+```
+
+✅ **Prod Profile:**
+- ✅ Docker Compose sobe junto
+- ✅ Apenas Docker na porta 8080
+- ✅ Logging INFO (menos verbose)
+- ✅ Otimizado para produção
+
+---
+
+## ⚙️ Maven Profiles
+
+O projeto utiliza **2 profiles Maven** para separar desenvolvimento de produção:
+
+### Profile: `dev` (Padrão)
+
+**Ativado automaticamente** quando você executa `mvn spring-boot:run` sem especificar `-P`.
+
+```bash
+# Equivalente a:
+mvn spring-boot:run -P dev
+```
+
+**Características:**
+
+| Aspecto | Configuração |
+|---------|-------------|
+| **Docker Compose** | ❌ Desativado (`spring.docker.compose.enabled=false`) |
+| **Banco de Dados** | H2 em-memória (`application-dev.yml`) |
+| **Logging Level** | DEBUG (detalhado) |
+| **Port** | 8080 (apenas Maven) |
+| **Use Case** | Desenvolvimento local, testes, debugging |
+
+**application-dev.yml:**
+```yaml
+spring:
+  datasource:
+    url: jdbc:h2:mem:cartoes
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+      
+logging:
+  level:
+    br.com.desafio.cartoes: DEBUG
+```
+
+### Profile: `prod` (Produção)
+
+**Ativado explicitamente:**
+
+```bash
+mvn clean package -P prod
+docker-compose up
+```
+
+**Características:**
+
+| Aspecto | Configuração |
+|---------|-------------|
+| **Docker Compose** | ✅ Ativado (dependência adicionada) |
+| **Banco de Dados** | Pode ser externo (MySQL, PostgreSQL, etc.) |
+| **Logging Level** | INFO (menos verbose) |
+| **Port** | 8080 (docker compose) |
+| **Use Case** | Deploy em produção, staging, CI/CD |
+
+**application-prod.yml:**
+```yaml
+spring:
+  application:
+    name: cartoes
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    
+logging:
+  level:
+    root: INFO
+    br.com.desafio.cartoes: INFO
+```
+
+### Por que Profiles?
+
+❌ **Antes (Problema):**
+```bash
+mvn spring-boot:run
+# Docker sobe JUNTO
+# Maven + Docker na mesma porta 8080 = CONFLITO! 💥
+```
+
+✅ **Depois (Solução):**
+```bash
+mvn spring-boot:run    # Dev: Maven apenas, sem Docker
+docker-compose up      # Prod: Docker apenas, sem Maven
 ```
 
 ---
@@ -740,7 +848,7 @@ FROM maven:3.9-eclipse-temurin-17 AS builder
 WORKDIR /build
 COPY pom.xml .
 COPY src src
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -P prod
 
 # Stage 2: Runtime (apenas JRE + JAR)
 FROM eclipse-temurin:17-jre-alpine
@@ -756,12 +864,13 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
 **Otimizações:**
+- ✅ Build com profile `prod` (inclui todas as dependências)
 - ✅ Imagem final ~180MB (vs 500+MB with full JDK)
 - ✅ Apenas runtime, sem ferramentas de build
 - ✅ Alpine Linux para footprint mínimo
 - ✅ Health check automático
 
-### Docker Compose
+### Docker Compose (Produção)
 
 ```yaml
 services:
@@ -769,11 +878,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # ⚠️ IMPORTANTE: Dockerfile faz build com -P prod automaticamente
+    container_name: cartoes-api
     ports:
       - "8080:8080"
     volumes:
       - ./logs:/app/logs
     environment:
+      # Profile ativado dentro do container
       SPRING_PROFILES_ACTIVE: prod
       JAVA_OPTS: "-Xms256m -Xmx512m -XX:+UseG1GC"
     healthcheck:
@@ -781,12 +893,38 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+networks:
+  cartoes-network:
+    driver: bridge
+volumes:
+  logs:
+    driver: local
 ```
+
+**Fluxo:**
+1. `mvn clean package -P prod` → Maven compila com dependências prod
+2. `docker-compose up` → Docker build (copia JAR gerado)
+3. Container inicia com `SPRING_PROFILES_ACTIVE=prod`
+4. ✓ Apenas Docker rodando na porta 8080
 
 ### Comandos Úteis
 
 ```bash
-# Build com Docker Compose
+# ========== DESENVOLVIMENTO ==========
+# Executar com profile dev (padrão, sem Docker)
+mvn spring-boot:run
+
+# Explicitamente com -P dev (mesmo resultado)
+mvn spring-boot:run -P dev
+
+# Rodar testes
+mvn test
+
+# ========== PRODUÇÃO ==========
+# Build com profile prod (inclui docker-compose dependency)
+mvn clean package -P prod
+
+# Subir container
 docker-compose up -d
 
 # Ver logs em tempo real
@@ -847,9 +985,24 @@ kubectl autoscale deployment cartoes-api --min=1 --max=5
 
 ## 🔧 Troubleshooting
 
-### Problema: "Port 8080 already in use"
+### Problema: "Port 8080 already in use" (Dev + Prod rodando juntos)
+
+⚠️ **Novo problema com Profiles:**
+
+Se você esqueceu de parar o `mvn spring-boot:run` e depois subiu `docker-compose up`, ambos tentarão usar 8080:
 
 ```bash
+# SOLUÇÃO 1: Parar Maven antes de subir Docker
+# Terminal 1: Maven rodando
+mvn spring-boot:run
+# Ctrl+C para parar
+
+# Terminal 2: Subir Docker
+docker-compose up -d
+```
+
+```bash
+# SOLUÇÃO 2: Verificar quem está usando porta 8080
 # Windows
 netstat -ano | findstr :8080
 taskkill /PID <PID> /F
@@ -857,25 +1010,33 @@ taskkill /PID <PID> /F
 # Mac/Linux
 lsof -i :8080
 kill -9 <PID>
+```
 
-# Ou mudar porta
+```bash
+# SOLUÇÃO 3: Mudar porta do Maven para desenvolvimento
 mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
 ```
 
-### Problema: "H2 Console não abre"
+**Lembrete:** Com Profiles, você **NÃO PRECISA** mais usar `SPRING_DOCKER_COMPOSE_ENABLED=false`, o profile `dev` já trata disso!
 
-✅ Por padrão, H2 console apenas em `dev` profile
+### Problema: "H2 Console não abre" (Desenvolvimento)
 
-```yaml
-spring:
-  h2:
-    console:
-      enabled: true  # Dev only, desabilitar em prod
+✅ H2 console **apenas disponível em profile `dev`** (via `application-dev.yml`)
+
+```bash
+# Verificar que você está em DEV
+mvn spring-boot:run  # Ativado por padrão
 ```
 
-Acessar em: `http://localhost:8080/h2-console`
+**Acessar em:** `http://localhost:8080/h2-console`
 
-JDBC URL: `jdbc:h2:mem:cartoes`
+| Campo | Valor |
+|-------|-------|
+| **JDBC URL** | `jdbc:h2:mem:cartoes` |
+| **Usuario** | `sa` |
+| **Senha** | (vazia) |
+
+❌ **Em PROD** não terá H2 (usa banco externo via compose.yaml)
 
 ### Problema: "Test falha com ClassNotFoundException"
 
@@ -1145,8 +1306,15 @@ CLIENT                  API                   SERVICE                  DB
 
 ## 📝 Notas sobre Commits & Versionamento
 
-**Versão Atual:** 1.0 (Commit 18)  
-**Status:** ✅ Logging + Docker + Testes implementados  
+**Versão Atual:** 1.1 (Commit 19 - Maven Profiles)  
+**Status:** ✅ Logging + Docker + Testes + Maven Profiles implementados  
+
+**Mudanças v1.1:**
+- ✅ Implementado Maven Profiles (dev padrão, prod com Docker)
+- ✅ Removida dependência docker-compose do escopo comum
+- ✅ Criados `application-dev.yml` e `application-prod.yml`
+- ✅ Resolvido conflito de porta 8080 (Maven vs Docker)
+
 **Próximas Melhorias:**
 - [ ] CI/CD Pipeline (GitHub Actions)
 - [ ] Autoscaling com Kubernetes

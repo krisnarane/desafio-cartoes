@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: cartoes
+  
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  
+  datasource:
+    url: jdbc:h2:mem:cartoes;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        '[format_sql]': true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    '[br.com.desafio.cartoes]': DEBUG
+    '[org.springframework.web]': DEBUG
+    '[org.hibernate]': INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/cartoes.log
+    max-size: 10MB
+    max-history: 30
