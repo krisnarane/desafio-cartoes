@@ -4,6 +4,7 @@ import br.com.desafio.cartoes.domain.dto.CartaoResponseDTO;
 import br.com.desafio.cartoes.domain.dto.ClienteRequestDTO;
 import br.com.desafio.cartoes.domain.dto.SolicitacaoResponseDTO;
 import br.com.desafio.cartoes.domain.entity.CartaoOferta;
+import br.com.desafio.cartoes.domain.enums.StatusOferta;
 import br.com.desafio.cartoes.domain.model.Cliente;
 import br.com.desafio.cartoes.domain.model.ResultadoElegibilidade;
 import lombok.AllArgsConstructor;
@@ -60,7 +61,7 @@ public class CartaoService {
             .tipoCartao(cartao.getTipoCartao().name())
             .valorAnuidadeMensal(cartao.getValorAnuidadeMensal())
             .valorLimiteDisponivel(cartao.getValorLimiteDisponivel())
-            .status("APROVADO") // eu poderia ter usado o StatusOferta 
+            .status(StatusOferta.APROVADO.name())
             .build();
     }
 }
