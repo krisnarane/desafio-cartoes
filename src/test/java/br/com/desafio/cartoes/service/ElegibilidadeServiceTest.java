@@ -2,6 +2,7 @@ package br.com.desafio.cartoes.service;
 
 import br.com.desafio.cartoes.domain.entity.CartaoOferta;
 import br.com.desafio.cartoes.domain.model.Cliente;
+import br.com.desafio.cartoes.domain.model.ResultadoElegibilidade;
 import br.com.desafio.cartoes.repository.CartaoRepository;
 import br.com.desafio.cartoes.rule.ElegibilidadeRule;
 import br.com.desafio.cartoes.support.TestFactory;
@@ -48,9 +49,9 @@ class ElegibilidadeServiceTest {
         when(regra1.aplicar(any(Cliente.class), anyList())).thenReturn(cartoes);
         when(regra2.aplicar(any(Cliente.class), anyList())).thenReturn(cartoes);
 
-        List<CartaoOferta> resultado = service.processar(cliente);
+        ResultadoElegibilidade resultado = service.processar(cliente);
 
-        assertThat(resultado).hasSize(3);
+        assertThat(resultado.getCartoesAprovados()).hasSize(3);
         verify(regra1).aplicar(cliente, cartoes);
         verify(regra2).aplicar(cliente, cartoes);
     }
@@ -61,9 +62,10 @@ class ElegibilidadeServiceTest {
 
         when(cartaoRepository.findByAtivoTrue()).thenReturn(Collections.emptyList());
 
-        List<CartaoOferta> resultado = service.processar(cliente);
+        ResultadoElegibilidade resultado = service.processar(cliente);
 
-        assertThat(resultado).isEmpty();
+        assertThat(resultado.getCartoesAprovados()).isEmpty();
+        assertThat(resultado.getMotivoRejeicao()).isNotBlank();
         verify(regra1, never()).aplicar(any(), anyList());
         verify(regra2, never()).aplicar(any(), anyList());
     }
@@ -76,9 +78,9 @@ class ElegibilidadeServiceTest {
         when(cartaoRepository.findByAtivoTrue()).thenReturn(cartoes);
         when(regra1.aplicar(any(Cliente.class), anyList())).thenReturn(Collections.emptyList());
 
-        List<CartaoOferta> resultado = service.processar(cliente);
+        ResultadoElegibilidade resultado = service.processar(cliente);
 
-        assertThat(resultado).isEmpty();
+        assertThat(resultado.getCartoesAprovados()).isEmpty();
         verify(regra1).aplicar(cliente, cartoes);
         verify(regra2, never()).aplicar(any(), anyList());
     }
@@ -93,9 +95,9 @@ class ElegibilidadeServiceTest {
         when(regra1.aplicar(any(Cliente.class), anyList())).thenReturn(apenasUm);
         when(regra2.aplicar(any(Cliente.class), anyList())).thenReturn(apenasUm);
 
-        List<CartaoOferta> resultado = service.processar(cliente);
+        ResultadoElegibilidade resultado = service.processar(cliente);
 
-        assertThat(resultado).hasSize(1);
+        assertThat(resultado.getCartoesAprovados()).hasSize(1);
         verify(regra2).aplicar(cliente, apenasUm);
     }
 

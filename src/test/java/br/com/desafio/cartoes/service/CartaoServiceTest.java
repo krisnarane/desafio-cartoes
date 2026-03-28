@@ -4,6 +4,7 @@ import br.com.desafio.cartoes.domain.dto.ClienteRequestDTO;
 import br.com.desafio.cartoes.domain.dto.SolicitacaoResponseDTO;
 import br.com.desafio.cartoes.domain.entity.CartaoOferta;
 import br.com.desafio.cartoes.domain.model.Cliente;
+import br.com.desafio.cartoes.domain.model.ResultadoElegibilidade;
 import br.com.desafio.cartoes.exception.ClienteInvalidoException;
 import br.com.desafio.cartoes.support.TestFactory;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +15,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
-import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -46,7 +46,7 @@ class CartaoServiceTest {
     void given_clienteValido_when_solicitar_then_retornaResponseComCartoes() {
         List<CartaoOferta> cartoes = TestFactory.todosCartoes();
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(cartoes);
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comCartoes(cartoes));
 
         SolicitacaoResponseDTO resultado = cartaoService.solicitar(clienteDTO);
 
@@ -58,7 +58,7 @@ class CartaoServiceTest {
     @Test
     void given_clienteValido_when_solicitar_then_responseTemUUIDEData() {
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(TestFactory.todosCartoes());
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comCartoes(TestFactory.todosCartoes()));
 
         SolicitacaoResponseDTO resultado = cartaoService.solicitar(clienteDTO);
 
@@ -69,7 +69,7 @@ class CartaoServiceTest {
     @Test
     void given_clienteSemCartoesElegiveis_when_solicitar_then_retornaListaVazia() {
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(Collections.emptyList());
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comRejeicao("Sem cartões elegíveis"));
 
         SolicitacaoResponseDTO resultado = cartaoService.solicitar(clienteDTO);
 
@@ -92,7 +92,7 @@ class CartaoServiceTest {
     void given_clienteValido_when_solicitar_then_cartaoResponseTemStatusAprovado() {
         List<CartaoOferta> cartoes = List.of(TestFactory.criarCartaoSemAnuidade());
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(cartoes);
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comCartoes(cartoes));
 
         SolicitacaoResponseDTO resultado = cartaoService.solicitar(clienteDTO);
 
@@ -107,7 +107,7 @@ class CartaoServiceTest {
     @Test
     void given_clienteValido_when_solicitar_then_chamaServicosNaOrdemCorreta() {
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(Collections.emptyList());
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comRejeicao("Sem cartões elegíveis"));
 
         cartaoService.solicitar(clienteDTO);
 

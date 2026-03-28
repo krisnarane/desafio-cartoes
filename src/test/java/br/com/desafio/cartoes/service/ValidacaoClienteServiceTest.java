@@ -26,7 +26,7 @@ class ValidacaoClienteServiceTest {
     @Test
     void given_cpfInvalido_when_validar_then_lancaExcecao400() {
         ClienteRequestDTO dto = TestFactory.criarClienteRequestDTO(25, "SP", new BigDecimal("5000"));
-        dto.setCpf("123"); // too short
+        dto.setCpf("123");
 
         ClienteInvalidoException ex = catchThrowableOfType(
                 ClienteInvalidoException.class, () -> service.validar(dto));

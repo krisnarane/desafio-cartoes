@@ -12,7 +12,7 @@ public class RegraPorIdade implements ElegibilidadeRule {
     @Override
     public List<CartaoOferta> aplicar(Cliente cliente, List<CartaoOferta> cartoes) {
         // Se idade entre 18 e 25 anos (exclusivo), remove Cashback e Parceiros
-        int idade = cliente.calcularIdade();
+        int idade = cliente.calcularIdade(); // calcular a idade p baseada na data d nasc.
         if (idade >= 18 && idade < 25) {
             return cartoes.stream()
                 .filter(c -> c.getTipoCartao() == TipoCartao.CARTAO_SEM_ANUIDADE)

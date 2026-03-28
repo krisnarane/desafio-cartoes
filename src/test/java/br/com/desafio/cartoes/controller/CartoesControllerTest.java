@@ -32,7 +32,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockitoExtension.class) // integra para criar os mocks
 class CartoesControllerTest {
 
     private MockMvc mockMvc;
@@ -45,6 +45,7 @@ class CartoesControllerTest {
 
     private ObjectMapper objectMapper;
 
+    // configurar mock com object mapper e snakecase
     @BeforeEach
     void setUp() {
         objectMapper = new ObjectMapper();
@@ -57,6 +58,7 @@ class CartoesControllerTest {
                 .build();
     }
 
+    // json de modelo
     private String validRequestJson() {
         return """
                 {
@@ -71,6 +73,7 @@ class CartoesControllerTest {
                 """.formatted(LocalDate.now().minusYears(30));
     }
 
+    // retorna cliente com cartoes ofertados
     private SolicitacaoResponseDTO criarResponseComCartoes() {
         CartaoResponseDTO cartao = CartaoResponseDTO.builder()
                 .tipoCartao("CARTAO_SEM_ANUIDADE")
@@ -95,6 +98,7 @@ class CartoesControllerTest {
                 .build();
     }
 
+    // retorna cliente sem cartoes
     private SolicitacaoResponseDTO criarResponseSemCartoes() {
         return SolicitacaoResponseDTO.builder()
                 .numeroSolicitacao(UUID.randomUUID().toString())
@@ -112,6 +116,7 @@ class CartoesControllerTest {
                 .build();
     }
 
+    // simulando POST para /cartoes com JSON válido, retorna 200
     @Test
     void given_clienteValido_when_postCartoes_then_retorna200ComCartoes() throws Exception {
         when(cartaoService.solicitar(any())).thenReturn(criarResponseComCartoes());
@@ -126,6 +131,7 @@ class CartoesControllerTest {
                 .andExpect(jsonPath("$.cartoes_ofertados[0].status").value("APROVADO"));
     }
 
+    // cliente sem cartoes, retorna vazio 204
     @Test
     void given_clienteSemCartoes_when_postCartoes_then_retorna204() throws Exception {
         when(cartaoService.solicitar(any())).thenReturn(criarResponseSemCartoes());
@@ -136,6 +142,7 @@ class CartoesControllerTest {
                 .andExpect(status().isNoContent());
     }
 
+    //testa campos faltando, retorna 400
     @Test
     void given_camposFaltando_when_postCartoes_then_retorna400() throws Exception {
         String json = """
@@ -150,6 +157,7 @@ class CartoesControllerTest {
                 .andExpect(status().isBadRequest());
     }
 
+    // testando email invalido
     @Test
     void given_emailInvalido_when_postCartoes_then_retorna400() throws Exception {
         String json = """
@@ -170,6 +178,7 @@ class CartoesControllerTest {
                 .andExpect(status().isBadRequest());
     }
 
+    // testa renda negativa
     @Test
     void given_rendaNegativa_when_postCartoes_then_retorna400() throws Exception {
         String json = """
@@ -190,6 +199,7 @@ class CartoesControllerTest {
                 .andExpect(status().isBadRequest());
     }
 
+    // testa menor de idade
     @Test
     void given_menorDeIdade_when_postCartoes_then_retorna422() throws Exception {
         when(cartaoService.solicitar(any()))
@@ -204,6 +214,7 @@ class CartoesControllerTest {
                 .andExpect(jsonPath("$.detail").value("Cliente menor de 18 anos não é elegível"));
     }
 
+    // testa formato de cpf invalido
     @Test
     void given_cpfInvalido_when_postCartoes_then_retorna400ViaExceptionHandler() throws Exception {
         when(cartaoService.solicitar(any()))
@@ -216,6 +227,7 @@ class CartoesControllerTest {
                 .andExpect(jsonPath("$.detail").value("CPF formato inválido"));
     }
 
+    // testa erro interno, 500
     @Test
     void given_erroInterno_when_postCartoes_then_retorna500() throws Exception {
         when(cartaoService.solicitar(any())).thenThrow(new RuntimeException("Unexpected error"));
@@ -226,6 +238,7 @@ class CartoesControllerTest {
                 .andExpect(status().isInternalServerError());
     }
 
+    // testa body vazio, retorna 400
     @Test
     void given_bodyVazio_when_postCartoes_then_retorna400() throws Exception {
         mockMvc.perform(post("/cartoes")
@@ -234,6 +247,7 @@ class CartoesControllerTest {
                 .andExpect(status().isBadRequest());
     }
 
+    // testa telefone invalido, 400
     @Test
     void given_telefoneInvalido_when_postCartoes_then_retorna400() throws Exception {
         String json = """
@@ -255,6 +269,7 @@ class CartoesControllerTest {
                 .andExpect(status().isBadRequest());
     }
 
+    // testa idade negativa, retorna 400
     @Test
     void given_idadeNegativa_when_postCartoes_then_retorna400() throws Exception {
         String json = """

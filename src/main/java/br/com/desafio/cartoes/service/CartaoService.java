@@ -5,6 +5,7 @@ import br.com.desafio.cartoes.domain.dto.ClienteRequestDTO;
 import br.com.desafio.cartoes.domain.dto.SolicitacaoResponseDTO;
 import br.com.desafio.cartoes.domain.entity.CartaoOferta;
 import br.com.desafio.cartoes.domain.model.Cliente;
+import br.com.desafio.cartoes.domain.model.ResultadoElegibilidade;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -31,10 +32,10 @@ public class CartaoService {
         Cliente cliente = validacaoService.converterParaModelo(clienteDTO);
         
         // Processa elegibilidade (aplica todas as rules)
-        List<CartaoOferta> cartoesAprovados = elegibilidadeService.processar(cliente);
-        
+        ResultadoElegibilidade resultadoElegibilidade = elegibilidadeService.processar(cliente);
+
         // Converte CartaoOferta para CartaoResponseDTO
-        List<CartaoResponseDTO> cartoesResponse = cartoesAprovados.stream()
+        List<CartaoResponseDTO> cartoesResponse = resultadoElegibilidade.getCartoesAprovados().stream()
             .map(this::converterParaResponse)
             .toList();
         
@@ -59,7 +60,7 @@ public class CartaoService {
             .tipoCartao(cartao.getTipoCartao().name())
             .valorAnuidadeMensal(cartao.getValorAnuidadeMensal())
             .valorLimiteDisponivel(cartao.getValorLimiteDisponivel())
-            .status("APROVADO")
+            .status("APROVADO") // eu poderia ter usado o StatusOferta 
             .build();
     }
 }
