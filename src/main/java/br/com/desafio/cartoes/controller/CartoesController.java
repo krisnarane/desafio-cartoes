@@ -1,6 +1,7 @@
 package br.com.desafio.cartoes.controller;
 
 import br.com.desafio.cartoes.domain.dto.ClienteRequestDTO;
+import br.com.desafio.cartoes.domain.dto.SolicitacaoRequestDTO;
 import br.com.desafio.cartoes.domain.dto.SolicitacaoResponseDTO;
 import br.com.desafio.cartoes.service.CartaoService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -44,23 +45,24 @@ public class CartoesController {
             content = @Content(mediaType = "application/problem+json"))
     })
     public ResponseEntity<?> solicitar(
-            @Valid @RequestBody ClienteRequestDTO cliente) {
-        
+            @Valid @RequestBody SolicitacaoRequestDTO request) {
+
+        ClienteRequestDTO cliente = request.getCliente();
         log.info("POST /cartoes recebido para CPF: {}", cliente.getCpf());
-        
+
         // CartaoService valida e processa elegibilidade
         // Se houver erro de negócio, lança ClienteInvalidoException
         // Se JSON inválido, MethodArgumentNotValidException é lançado automaticamente
         SolicitacaoResponseDTO resultado = cartaoService.solicitar(cliente);
-        
+
         // Se nenhum cartão elegível, retorna 204 No Content
         if (resultado.getCartoesOfertados().isEmpty()) {
             log.info("Nenhum cartão elegível para CPF: {} - retornando 204", cliente.getCpf());
             return ResponseEntity.noContent().build();
         }
-        
+
         // Se tem cartões, retorna 200 OK com resultado
-        log.info("Cartões encontrados para CPF {}: {} cartões - retornando 200", 
+        log.info("Cartões encontrados para CPF {}: {} cartões - retornando 200",
             cliente.getCpf(), resultado.getCartoesOfertados().size());
         return ResponseEntity.status(HttpStatus.OK).body(resultado);
     }

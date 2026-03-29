@@ -62,13 +62,15 @@ class CartoesControllerTest {
     private String validRequestJson() {
         return """
                 {
-                    "nome": "João Silva",
-                    "cpf": "12345678901",
-                    "data_nascimento": "%s",
-                    "uf": "RJ",
-                    "renda_mensal": 8000.00,
-                    "email": "joao@email.com",
-                    "telefone_whatsapp": "11999999999"
+                    "cliente": {
+                        "nome": "João Silva",
+                        "cpf": "12345678901",
+                        "data_nascimento": "%s",
+                        "uf": "RJ",
+                        "renda_mensal": 8000.00,
+                        "email": "joao@email.com",
+                        "telefone_whatsapp": "11999999999"
+                    }
                 }
                 """.formatted(LocalDate.now().minusYears(30));
     }
@@ -147,7 +149,9 @@ class CartoesControllerTest {
     void given_camposFaltando_when_postCartoes_then_retorna400() throws Exception {
         String json = """
                 {
-                    "nome": "João"
+                    "cliente": {
+                        "nome": "João"
+                    }
                 }
                 """;
 
@@ -162,13 +166,15 @@ class CartoesControllerTest {
     void given_emailInvalido_when_postCartoes_then_retorna400() throws Exception {
         String json = """
                 {
-                    "nome": "João Silva",
-                    "cpf": "12345678901",
-                    "data_nascimento": "%s",
-                    "uf": "RJ",
-                    "renda_mensal": 8000.00,
-                    "email": "invalido",
-                    "telefone_whatsapp": "11999999999"
+                    "cliente": {
+                        "nome": "João Silva",
+                        "cpf": "12345678901",
+                        "data_nascimento": "%s",
+                        "uf": "RJ",
+                        "renda_mensal": 8000.00,
+                        "email": "invalido",
+                        "telefone_whatsapp": "11999999999"
+                    }
                 }
                 """.formatted(LocalDate.now().minusYears(30));
 
@@ -183,13 +189,15 @@ class CartoesControllerTest {
     void given_rendaNegativa_when_postCartoes_then_retorna400() throws Exception {
         String json = """
                 {
-                    "nome": "João Silva",
-                    "cpf": "12345678901",
-                    "data_nascimento": "%s",
-                    "uf": "RJ",
-                    "renda_mensal": -1000,
-                    "email": "joao@email.com",
-                    "telefone_whatsapp": "11999999999"
+                    "cliente": {
+                        "nome": "João Silva",
+                        "cpf": "12345678901",
+                        "data_nascimento": "%s",
+                        "uf": "RJ",
+                        "renda_mensal": -1000,
+                        "email": "joao@email.com",
+                        "telefone_whatsapp": "11999999999"
+                    }
                 }
                 """.formatted(LocalDate.now().minusYears(30));
 
@@ -252,14 +260,16 @@ class CartoesControllerTest {
     void given_telefoneInvalido_when_postCartoes_then_retorna400() throws Exception {
         String json = """
                 {
-                    "nome": "João Silva",
-                    "cpf": "12345678901",
-                    "idade": 30,
-                    "data_nascimento": "%s",
-                    "uf": "RJ",
-                    "renda_mensal": 8000.00,
-                    "email": "joao@email.com",
-                    "telefone_whatsapp": "123"
+                    "cliente": {
+                        "nome": "João Silva",
+                        "cpf": "12345678901",
+                        "idade": 30,
+                        "data_nascimento": "%s",
+                        "uf": "RJ",
+                        "renda_mensal": 8000.00,
+                        "email": "joao@email.com",
+                        "telefone_whatsapp": "123"
+                    }
                 }
                 """.formatted(LocalDate.now().minusYears(30));
 
@@ -274,14 +284,16 @@ class CartoesControllerTest {
     void given_idadeNegativa_when_postCartoes_then_retorna400() throws Exception {
         String json = """
                 {
-                    "nome": "João Silva",
-                    "cpf": "12345678901",
-                    "idade": -1,
-                    "data_nascimento": "%s",
-                    "uf": "RJ",
-                    "renda_mensal": 8000.00,
-                    "email": "joao@email.com",
-                    "telefone_whatsapp": "11999999999"
+                    "cliente": {
+                        "nome": "João Silva",
+                        "cpf": "12345678901",
+                        "idade": -1,
+                        "data_nascimento": "%s",
+                        "uf": "RJ",
+                        "renda_mensal": 8000.00,
+                        "email": "joao@email.com",
+                        "telefone_whatsapp": "11999999999"
+                    }
                 }
                 """.formatted(LocalDate.now().minusYears(30));
 

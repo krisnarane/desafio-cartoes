@@ -4,13 +4,17 @@ import br.com.desafio.cartoes.domain.dto.CartaoResponseDTO;
 import br.com.desafio.cartoes.domain.dto.ClienteRequestDTO;
 import br.com.desafio.cartoes.domain.dto.SolicitacaoResponseDTO;
 import br.com.desafio.cartoes.domain.entity.CartaoOferta;
+import br.com.desafio.cartoes.domain.entity.Solicitacao;
 import br.com.desafio.cartoes.domain.enums.StatusOferta;
+import br.com.desafio.cartoes.domain.enums.TipoCartao;
 import br.com.desafio.cartoes.domain.model.Cliente;
 import br.com.desafio.cartoes.domain.model.ResultadoElegibilidade;
+import br.com.desafio.cartoes.repository.SolicitacaoRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
@@ -22,6 +26,7 @@ public class CartaoService {
     
     private final ValidacaoClienteService validacaoService;
     private final ElegibilidadeService elegibilidadeService;
+    private final SolicitacaoRepository solicitacaoRepository;
     
     public SolicitacaoResponseDTO solicitar(ClienteRequestDTO clienteDTO) {
         log.info("Iniciando processamento de solicitação para CPF: {}", clienteDTO.getCpf());
@@ -40,16 +45,28 @@ public class CartaoService {
             .map(this::converterParaResponse)
             .toList();
         
+        // Gera número único de solicitação
+        String numeroSolicitacao = UUID.randomUUID().toString();
+        LocalDateTime dataSolicitacao = LocalDateTime.now();
+        
         // Monta resposta
         SolicitacaoResponseDTO resposta = SolicitacaoResponseDTO.builder()
-            .numeroSolicitacao(UUID.randomUUID().toString())
-            .dataSolicitacao(LocalDateTime.now())
+            .numeroSolicitacao(numeroSolicitacao)
+            .dataSolicitacao(dataSolicitacao)
             .cliente(clienteDTO)
             .cartoesOfertados(cartoesResponse)
             .build();
         
-        log.info("Solicitação processada para CPF {}: {} cartões aprovados", 
-            clienteDTO.getCpf(), cartoesResponse.size());
+        // Persiste solicitação para auditoria
+        Solicitacao solicitacaoEntity = Solicitacao.builder()
+            .numeroSolicitacao(numeroSolicitacao)
+            .cpfCliente(clienteDTO.getCpf())
+            .dataSolicitacao(dataSolicitacao)
+            .build();
+        
+        solicitacaoRepository.save(solicitacaoEntity);
+        log.info("Solicitação {} salva no banco de dados para CPF: {} com {} cartões aprovados", 
+            numeroSolicitacao, clienteDTO.getCpf(), cartoesResponse.size());
         
         return resposta;
     }
@@ -57,9 +74,14 @@ public class CartaoService {
     
      // Converter CartaoOferta para CartaoResponseDTO
     private CartaoResponseDTO converterParaResponse(CartaoOferta cartao) {
+        // CARTAO_SEM_ANUIDADE sempre retorna valor 0.00 conforme especificação
+        BigDecimal valorAnuidade = TipoCartao.CARTAO_SEM_ANUIDADE == cartao.getTipoCartao()
+            ? BigDecimal.ZERO.setScale(2, java.math.RoundingMode.HALF_UP)
+            : cartao.getValorAnuidadeMensal();
+        
         return CartaoResponseDTO.builder()
             .tipoCartao(cartao.getTipoCartao().name())
-            .valorAnuidadeMensal(cartao.getValorAnuidadeMensal())
+            .valorAnuidadeMensal(valorAnuidade)
             .valorLimiteDisponivel(cartao.getValorLimiteDisponivel())
             .status(StatusOferta.APROVADO.name())
             .build();

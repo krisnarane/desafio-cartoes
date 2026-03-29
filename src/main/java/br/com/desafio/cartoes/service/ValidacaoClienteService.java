@@ -7,7 +7,6 @@ import br.com.desafio.cartoes.util.ClienteValidator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -42,12 +41,9 @@ public class ValidacaoClienteService {
             );
         }
         
-        // Valida idade
-        LocalDate agora = LocalDate.now();
-        int idade = Period.between(dto.getDataNascimento(), agora).getYears();
-        
-        if (idade < 18) {
-            log.warn("Cliente menor de 18 anos rejeitado: CPF {}, idade {}", dto.getCpf(), idade);
+        // Valida idade: deve ser >= 18
+        if (dto.getIdade() < 18) {
+            log.warn("Cliente menor de 18 anos rejeitado: CPF {}, idade {}", dto.getCpf(), dto.getIdade());
             throw new ClienteInvalidoException(
                 "Cliente menor de 18 anos não é elegível",
                 "CLIENTE_MENOR_DE_IDADE",
@@ -55,12 +51,15 @@ public class ValidacaoClienteService {
             );
         }
         
-        // Valida renda (complementa Bean Validation)
-        if (dto.getRendaMensal().compareTo(BigDecimal.ZERO) <= 0) {
-            log.warn("Renda inválida: {}", dto.getRendaMensal());
+        // Valida coerência entre idade informada e data de nascimento (segurança adicional)
+        LocalDate agora = LocalDate.now();
+        int idadeCalculada = Period.between(dto.getDataNascimento(), agora).getYears();
+        
+        if (Math.abs(dto.getIdade() - idadeCalculada) > 1) {
+            log.warn("Idade incoerente: informada {}, calculada {}", dto.getIdade(), idadeCalculada);
             throw new ClienteInvalidoException(
-                "Renda mensal deve ser maior que zero",
-                "RENDA_INVALIDA",
+                "Idade informada não corresponde à data de nascimento",
+                "IDADE_INCOERENTE",
                 400
             );
         }

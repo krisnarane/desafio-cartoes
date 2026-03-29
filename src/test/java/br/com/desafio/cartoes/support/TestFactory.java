@@ -17,6 +17,7 @@ public final class TestFactory {
         return ClienteRequestDTO.builder()
                 .nome("João Silva")
                 .cpf("12345678901")
+                .idade(idade)
                 .dataNascimento(LocalDate.now().minusYears(idade))
                 .uf(uf)
                 .rendaMensal(renda)
