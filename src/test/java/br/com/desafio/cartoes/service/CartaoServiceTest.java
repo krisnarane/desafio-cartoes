@@ -6,6 +6,7 @@ import br.com.desafio.cartoes.domain.entity.CartaoOferta;
 import br.com.desafio.cartoes.domain.model.Cliente;
 import br.com.desafio.cartoes.domain.model.ResultadoElegibilidade;
 import br.com.desafio.cartoes.exception.ClienteInvalidoException;
+import br.com.desafio.cartoes.repository.SolicitacaoRepository;
 import br.com.desafio.cartoes.support.TestFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,6 +30,9 @@ class CartaoServiceTest {
 
     @Mock
     private ElegibilidadeService elegibilidadeService;
+
+    @Mock
+    private SolicitacaoRepository solicitacaoRepository;
 
     @InjectMocks
     private CartaoService cartaoService;

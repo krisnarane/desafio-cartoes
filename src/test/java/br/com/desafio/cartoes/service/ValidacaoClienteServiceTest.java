@@ -107,30 +107,6 @@ class ValidacaoClienteServiceTest {
         assertThatNoException().isThrownBy(() -> service.validar(dto));
     }
 
-    // --- Income Validation ---
-
-    @Test
-    void given_rendaZero_when_validar_then_lancaExcecao400() {
-        ClienteRequestDTO dto = TestFactory.criarClienteRequestDTO(25, "SP", BigDecimal.ZERO);
-
-        ClienteInvalidoException ex = catchThrowableOfType(
-                ClienteInvalidoException.class, () -> service.validar(dto));
-
-        assertThat(ex.getCodigoErro()).isEqualTo("RENDA_INVALIDA");
-        assertThat(ex.getStatusCode()).isEqualTo(400);
-    }
-
-    @Test
-    void given_rendaNegativa_when_validar_then_lancaExcecao400() {
-        ClienteRequestDTO dto = TestFactory.criarClienteRequestDTO(25, "SP", new BigDecimal("-1000"));
-
-        ClienteInvalidoException ex = catchThrowableOfType(
-                ClienteInvalidoException.class, () -> service.validar(dto));
-
-        assertThat(ex.getCodigoErro()).isEqualTo("RENDA_INVALIDA");
-        assertThat(ex.getStatusCode()).isEqualTo(400);
-    }
-
     // --- Valid Client ---
 
     @Test

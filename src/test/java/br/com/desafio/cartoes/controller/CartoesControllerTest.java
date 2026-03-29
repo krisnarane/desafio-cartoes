@@ -65,6 +65,7 @@ class CartoesControllerTest {
                     "cliente": {
                         "nome": "João Silva",
                         "cpf": "12345678901",
+                        "idade": 30,
                         "data_nascimento": "%s",
                         "uf": "RJ",
                         "renda_mensal": 8000.00,
@@ -169,6 +170,7 @@ class CartoesControllerTest {
                     "cliente": {
                         "nome": "João Silva",
                         "cpf": "12345678901",
+                        "idade": 30,
                         "data_nascimento": "%s",
                         "uf": "RJ",
                         "renda_mensal": 8000.00,
@@ -192,6 +194,7 @@ class CartoesControllerTest {
                     "cliente": {
                         "nome": "João Silva",
                         "cpf": "12345678901",
+                        "idade": 30,
                         "data_nascimento": "%s",
                         "uf": "RJ",
                         "renda_mensal": -1000,
