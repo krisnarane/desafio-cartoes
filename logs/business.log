@@ -60,3 +60,532 @@
 2026-03-29 21:40:42.612 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
 2026-03-29 21:40:42.619 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
 2026-03-29 21:41:10.088 [main] INFO  b.c.d.c.CartoesApplicationTests - Started CartoesApplicationTests in 29.592 seconds (process running for 46.169)
+2026-03-30 15:33:33.641 [main] INFO  b.c.d.c.CartoesApplicationTests - Starting CartoesApplicationTests using Java 17.0.15 with PID 27676 (started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 15:33:33.646 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 15:33:33.647 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 15:33:46.936 [main] INFO  b.c.d.c.CartoesApplicationTests - Started CartoesApplicationTests in 14.454 seconds (process running for 27.477)
+2026-03-30 18:34:19.258 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication v0.0.1-SNAPSHOT using Java 17.0.18 with PID 1 (/app/app.jar started by root in /app)
+2026-03-30 18:34:19.381 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 18:34:19.444 [main] INFO  b.c.d.cartoes.CartoesApplication - The following 1 profile is active: "dev"
+2026-03-30 18:35:02.000 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 53.444 seconds (process running for 62.106)
+2026-03-30 18:38:34.249 [http-nio-8080-exec-7] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 15:48:46.016 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 22452 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 15:48:46.018 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 15:48:46.020 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 15:53:06.927 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 37436 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 15:53:06.928 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 15:53:06.931 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 15:55:53.389 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 29396 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 15:55:53.390 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 15:55:53.392 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 15:57:37.269 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 37880 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 15:57:37.271 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 15:57:37.274 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 15:59:47.542 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 39924 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 15:59:47.545 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 15:59:47.548 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 19:02:18.028 [http-nio-8080-exec-3] ERROR b.c.d.c.e.GlobalExceptionHandler - Erro inesperado na aplicação
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource actuator/beans for request '/actuator/beans'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-03-30 19:02:25.969 [http-nio-8080-exec-4] ERROR b.c.d.c.e.GlobalExceptionHandler - Erro inesperado na aplicação
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource actuator/beans for request '/actuator/beans'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-03-30 16:02:38.293 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 18240 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 16:02:38.295 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 16:02:38.299 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 16:04:58.325 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 22920 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 16:04:58.326 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 16:04:58.328 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 16:05:19.232 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 22.945 seconds (process running for 24.202)
+2026-03-30 19:09:32.453 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication v0.0.1-SNAPSHOT using Java 17.0.18 with PID 1 (/app/app.jar started by root in /app)
+2026-03-30 19:09:32.484 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 19:09:32.497 [main] INFO  b.c.d.cartoes.CartoesApplication - The following 1 profile is active: "dev"
+2026-03-30 19:09:54.477 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 30.517 seconds (process running for 35.87)
+2026-03-30 19:13:42.854 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication v0.0.1-SNAPSHOT using Java 17.0.18 with PID 1 (/app/app.jar started by root in /app)
+2026-03-30 19:13:42.859 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 19:13:42.875 [main] INFO  b.c.d.cartoes.CartoesApplication - The following 1 profile is active: "dev"
+2026-03-30 19:14:08.182 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 28.728 seconds (process running for 40.061)
+2026-03-30 19:14:36.465 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 19:14:36.469 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-30 19:14:36.472 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-30 19:14:36.492 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-10 passou com sucesso
+2026-03-30 19:14:36.504 [http-nio-8080-exec-4] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 123.456.789-10
+2026-03-30 19:14:39.211 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 19:14:39.217 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorIdade aplicada: 3 → 3 cartões
+2026-03-30 19:14:39.229 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorRenda aplicada: 3 → 1 cartões
+2026-03-30 19:14:39.234 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorUF aplicada: 1 → 1 cartões
+2026-03-30 19:14:39.239 [http-nio-8080-exec-4] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 123.456.789-10: 1 cartões aprovados
+2026-03-30 19:14:39.313 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 90386da2-2647-4bf5-8d20-e2e1887ea3bd salva no banco de dados para CPF: 123.456.789-10 com 1 cartões aprovados
+2026-03-30 19:14:39.316 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-30 16:17:41.906 [main] INFO  b.c.d.c.CartoesApplicationTests - Starting CartoesApplicationTests using Java 21.0.7 with PID 29676 (started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 16:17:41.908 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 16:17:41.909 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 16:17:55.882 [main] INFO  b.c.d.c.CartoesApplicationTests - Started CartoesApplicationTests in 15.249 seconds (process running for 19.197)
+2026-03-30 16:17:59.404 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:17:59.729 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:17:59.744 [main] INFO  b.c.d.c.controller.CartoesController - Nenhum cartão elegível para CPF: 12345678901 - retornando 204
+2026-03-30 16:17:59.839 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:17:59.842 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Regra de negócio violada: CLIENTE_MENOR_DE_IDADE - Cliente menor de 18 anos não é elegível
+2026-03-30 16:18:00.127 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:00.178 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:00.261 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:00.353 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:00.431 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 16:18:00.433 [main] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-30 16:18:00.561 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:00.632 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Corpo da requisição inválido ou ausente
+2026-03-30 16:18:00.683 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 16:18:00.684 [main] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 2 cartões - retornando 200
+2026-03-30 16:18:00.766 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:00.768 [main] ERROR b.c.d.c.e.GlobalExceptionHandler - Erro inesperado na aplicação
+java.lang.RuntimeException: Unexpected error
+	at br.com.desafio.cartoes.service.CartaoService.solicitar(CartaoService.java:32)
+	at br.com.desafio.cartoes.controller.CartoesController.solicitar(CartoesController.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199)
+	at br.com.desafio.cartoes.controller.CartoesControllerTest.given_erroInterno_when_postCartoes_then_retorna500(CartoesControllerTest.java:251)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-03-30 16:18:00.854 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:00.854 [main] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 12345678901: 1 cartões - retornando 200
+2026-03-30 16:18:00.922 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:00.922 [main] INFO  b.c.d.c.controller.CartoesController - Nenhum cartão elegível para CPF: 12345678901 - retornando 204
+2026-03-30 16:18:00.955 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:00.957 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Regra de negócio violada: CPF_INVALIDO - CPF formato inválido
+2026-03-30 16:18:06.493 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:06.567 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 3aab417a-b9bf-4604-b586-db3268a6ca59 salva no banco de dados para CPF: 12345678901 com 1 cartões aprovados
+2026-03-30 16:18:06.714 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:06.717 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação adbfcfc0-9399-4a7c-bd62-858814462479 salva no banco de dados para CPF: 12345678901 com 0 cartões aprovados
+2026-03-30 16:18:06.730 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:06.735 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 7c193876-9903-4772-8679-e40ef265ccb1 salva no banco de dados para CPF: 12345678901 com 3 cartões aprovados
+2026-03-30 16:18:06.781 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:06.784 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 9166683b-9914-44f3-b416-2dad80260a4f salva no banco de dados para CPF: 12345678901 com 3 cartões aprovados
+2026-03-30 16:18:06.835 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:06.864 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:06.869 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação bd8c6353-593d-40d7-aebc-ba1f5d68e464 salva no banco de dados para CPF: 12345678901 com 3 cartões aprovados
+2026-03-30 16:18:07.200 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:07.201 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:07.202 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 3 → 0 cartões
+2026-03-30 16:18:07.204 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Nenhum cartão elegível após ElegibilidadeRule$MockitoMock$veDiZYvO
+2026-03-30 16:18:07.204 [main] INFO  b.c.d.c.service.ElegibilidadeService - Cliente 12345678901 não elegível a nenhum cartão após aplicação das regras
+2026-03-30 16:18:07.213 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:07.215 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:07.215 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 3 → 3 cartões
+2026-03-30 16:18:07.216 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 3 → 3 cartões
+2026-03-30 16:18:07.217 [main] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 12345678901: 3 cartões aprovados
+2026-03-30 16:18:07.223 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:07.223 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:07.224 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 3 → 1 cartões
+2026-03-30 16:18:07.225 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 1 → 1 cartões
+2026-03-30 16:18:07.226 [main] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 12345678901: 1 cartões aprovados
+2026-03-30 16:18:07.232 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:07.232 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 0
+2026-03-30 16:18:07.233 [main] INFO  b.c.d.c.service.ElegibilidadeService - Nenhum cartão ativo encontrado para processar
+2026-03-30 16:18:07.240 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:07.240 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:07.241 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 3 → 3 cartões
+2026-03-30 16:18:07.241 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$veDiZYvO aplicada: 3 → 3 cartões
+2026-03-30 16:18:07.242 [main] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 12345678901: 3 cartões aprovados
+2026-03-30 16:18:07.252 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123
+2026-03-30 16:18:07.256 [main] WARN  b.c.d.c.s.ValidacaoClienteService - CPF inválido: 123
+2026-03-30 16:18:07.280 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:07.281 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 12345678901 passou com sucesso
+2026-03-30 16:18:07.285 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:07.285 [main] WARN  b.c.d.c.s.ValidacaoClienteService - UF inválida: sp
+2026-03-30 16:18:07.299 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:07.299 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 12345678901 passou com sucesso
+2026-03-30 16:18:07.302 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:07.303 [main] WARN  b.c.d.c.s.ValidacaoClienteService - UF inválida: XX
+2026-03-30 16:18:07.307 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 
+2026-03-30 16:18:07.307 [main] WARN  b.c.d.c.s.ValidacaoClienteService - CPF inválido: 
+2026-03-30 16:18:07.311 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-01
+2026-03-30 16:18:07.311 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-01 passou com sucesso
+2026-03-30 16:18:07.314 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:07.315 [main] WARN  b.c.d.c.s.ValidacaoClienteService - Cliente menor de 18 anos rejeitado: CPF 12345678901, idade 17
+2026-03-30 16:18:07.322 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:07.322 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 12345678901 passou com sucesso
+2026-03-30 16:18:35.169 [main] INFO  b.c.d.c.CartoesApplicationTests - Starting CartoesApplicationTests using Java 21.0.7 with PID 10428 (started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 16:18:35.170 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 16:18:35.172 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 16:18:49.279 [main] INFO  b.c.d.c.CartoesApplicationTests - Started CartoesApplicationTests in 15.559 seconds (process running for 19.312)
+2026-03-30 16:18:52.598 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:52.865 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:52.878 [main] INFO  b.c.d.c.controller.CartoesController - Nenhum cartão elegível para CPF: 12345678901 - retornando 204
+2026-03-30 16:18:52.932 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:52.935 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Regra de negócio violada: CLIENTE_MENOR_DE_IDADE - Cliente menor de 18 anos não é elegível
+2026-03-30 16:18:53.124 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:53.186 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:53.243 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:53.295 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:53.349 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 16:18:53.351 [main] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-30 16:18:53.448 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-30 16:18:53.506 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Corpo da requisição inválido ou ausente
+2026-03-30 16:18:53.557 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 16:18:53.558 [main] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 2 cartões - retornando 200
+2026-03-30 16:18:53.637 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:53.640 [main] ERROR b.c.d.c.e.GlobalExceptionHandler - Erro inesperado na aplicação
+java.lang.RuntimeException: Unexpected error
+	at br.com.desafio.cartoes.service.CartaoService.solicitar(CartaoService.java:32)
+	at br.com.desafio.cartoes.controller.CartoesController.solicitar(CartoesController.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199)
+	at br.com.desafio.cartoes.controller.CartoesControllerTest.given_erroInterno_when_postCartoes_then_retorna500(CartoesControllerTest.java:251)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-03-30 16:18:53.692 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:53.693 [main] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 12345678901: 1 cartões - retornando 200
+2026-03-30 16:18:53.745 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:53.746 [main] INFO  b.c.d.c.controller.CartoesController - Nenhum cartão elegível para CPF: 12345678901 - retornando 204
+2026-03-30 16:18:53.788 [main] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 12345678901
+2026-03-30 16:18:53.790 [main] WARN  b.c.d.c.e.GlobalExceptionHandler - Regra de negócio violada: CPF_INVALIDO - CPF formato inválido
+2026-03-30 16:18:54.650 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:54.656 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação c52287e0-dbde-4c2d-9466-dec2d59ac31f salva no banco de dados para CPF: 12345678901 com 1 cartões aprovados
+2026-03-30 16:18:54.676 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:54.676 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação d3f1c67f-b799-4622-bd94-272002852f9c salva no banco de dados para CPF: 12345678901 com 0 cartões aprovados
+2026-03-30 16:18:54.682 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:54.684 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 56e87e6a-3169-4722-b22c-bdffe9b24e72 salva no banco de dados para CPF: 12345678901 com 3 cartões aprovados
+2026-03-30 16:18:54.721 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:54.723 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 69148079-5fe9-43b3-9a35-8e29087c0d30 salva no banco de dados para CPF: 12345678901 com 3 cartões aprovados
+2026-03-30 16:18:54.737 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:54.752 [main] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 12345678901
+2026-03-30 16:18:54.753 [main] INFO  b.c.d.cartoes.service.CartaoService - Solicitação c95d3bc4-e069-4386-a6ff-9ccc0c7eb500 salva no banco de dados para CPF: 12345678901 com 3 cartões aprovados
+2026-03-30 16:18:54.958 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:54.959 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:54.960 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 3 → 0 cartões
+2026-03-30 16:18:54.961 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Nenhum cartão elegível após ElegibilidadeRule$MockitoMock$FdbmbNzL
+2026-03-30 16:18:54.961 [main] INFO  b.c.d.c.service.ElegibilidadeService - Cliente 12345678901 não elegível a nenhum cartão após aplicação das regras
+2026-03-30 16:18:54.970 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:54.971 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:54.971 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 3 → 3 cartões
+2026-03-30 16:18:54.972 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 3 → 3 cartões
+2026-03-30 16:18:54.972 [main] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 12345678901: 3 cartões aprovados
+2026-03-30 16:18:54.979 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:54.979 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:54.980 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 3 → 1 cartões
+2026-03-30 16:18:54.980 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 1 → 1 cartões
+2026-03-30 16:18:54.981 [main] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 12345678901: 1 cartões aprovados
+2026-03-30 16:18:54.988 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:54.990 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 0
+2026-03-30 16:18:54.990 [main] INFO  b.c.d.c.service.ElegibilidadeService - Nenhum cartão ativo encontrado para processar
+2026-03-30 16:18:54.995 [main] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 12345678901
+2026-03-30 16:18:54.996 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 16:18:54.996 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 3 → 3 cartões
+2026-03-30 16:18:54.997 [main] DEBUG b.c.d.c.service.ElegibilidadeService - Regra ElegibilidadeRule$MockitoMock$FdbmbNzL aplicada: 3 → 3 cartões
+2026-03-30 16:18:54.997 [main] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 12345678901: 3 cartões aprovados
+2026-03-30 16:18:55.008 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123
+2026-03-30 16:18:55.010 [main] WARN  b.c.d.c.s.ValidacaoClienteService - CPF inválido: 123
+2026-03-30 16:18:55.041 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:55.042 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 12345678901 passou com sucesso
+2026-03-30 16:18:55.045 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:55.045 [main] WARN  b.c.d.c.s.ValidacaoClienteService - UF inválida: sp
+2026-03-30 16:18:55.050 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:55.050 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 12345678901 passou com sucesso
+2026-03-30 16:18:55.054 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:55.054 [main] WARN  b.c.d.c.s.ValidacaoClienteService - UF inválida: XX
+2026-03-30 16:18:55.059 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 
+2026-03-30 16:18:55.059 [main] WARN  b.c.d.c.s.ValidacaoClienteService - CPF inválido: 
+2026-03-30 16:18:55.062 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-01
+2026-03-30 16:18:55.062 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-01 passou com sucesso
+2026-03-30 16:18:55.065 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:55.066 [main] WARN  b.c.d.c.s.ValidacaoClienteService - Cliente menor de 18 anos rejeitado: CPF 12345678901, idade 17
+2026-03-30 16:18:55.075 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 12345678901
+2026-03-30 16:18:55.075 [main] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 12345678901 passou com sucesso
+2026-03-30 19:22:36.422 [http-nio-8080-exec-6] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 19:22:36.435 [http-nio-8080-exec-6] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-30 19:22:36.442 [http-nio-8080-exec-6] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-30 19:22:36.459 [http-nio-8080-exec-6] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-10 passou com sucesso
+2026-03-30 19:22:36.466 [http-nio-8080-exec-6] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 123.456.789-10
+2026-03-30 19:22:37.033 [http-nio-8080-exec-6] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 19:22:37.036 [http-nio-8080-exec-6] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorIdade aplicada: 3 → 3 cartões
+2026-03-30 19:22:37.047 [http-nio-8080-exec-6] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorRenda aplicada: 3 → 1 cartões
+2026-03-30 19:22:37.054 [http-nio-8080-exec-6] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorUF aplicada: 1 → 1 cartões
+2026-03-30 19:22:37.111 [http-nio-8080-exec-6] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 123.456.789-10: 1 cartões aprovados
+2026-03-30 19:22:37.863 [http-nio-8080-exec-6] INFO  b.c.d.cartoes.service.CartaoService - Solicitação a8eabc94-1709-4ee2-9c09-af9653a2d1ec salva no banco de dados para CPF: 123.456.789-10 com 1 cartões aprovados
+2026-03-30 19:22:37.866 [http-nio-8080-exec-6] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-30 20:26:43.710 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-30 20:26:43.724 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-30 20:26:43.726 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-30 20:26:43.767 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-10 passou com sucesso
+2026-03-30 20:26:43.770 [http-nio-8080-exec-4] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 123.456.789-10
+2026-03-30 20:26:44.681 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-30 20:26:44.695 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorIdade aplicada: 3 → 3 cartões
+2026-03-30 20:26:44.708 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorRenda aplicada: 3 → 1 cartões
+2026-03-30 20:26:44.717 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorUF aplicada: 1 → 1 cartões
+2026-03-30 20:26:44.720 [http-nio-8080-exec-4] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 123.456.789-10: 1 cartões aprovados
+2026-03-30 20:26:45.835 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Solicitação 6aa767ca-6fc3-4fd1-af7f-a951e0f0a138 salva no banco de dados para CPF: 123.456.789-10 com 1 cartões aprovados
+2026-03-30 20:26:45.847 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-30 18:04:31.759 [main] INFO  b.c.d.c.CartoesApplicationTests - Starting CartoesApplicationTests using Java 17.0.15 with PID 15908 (started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-30 18:04:31.764 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 18:04:31.766 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 18:05:21.150 [main] INFO  b.c.d.c.CartoesApplicationTests - Started CartoesApplicationTests in 59.919 seconds (process running for 90.434)

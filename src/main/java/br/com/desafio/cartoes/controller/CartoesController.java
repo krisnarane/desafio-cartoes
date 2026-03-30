@@ -44,6 +44,7 @@ public class CartoesController {
         @ApiResponse(responseCode = "500", description = "Erro interno do servidor",
             content = @Content(mediaType = "application/problem+json"))
     })
+
     public ResponseEntity<?> solicitar(
             @Valid @RequestBody SolicitacaoRequestDTO request) {
 

@@ -1,6 +1,5 @@
 package br.com.desafio.cartoes.config;
 
-import io.swagger.v3.core.jackson.ModelResolver;
 import org.springframework.boot.jackson.autoconfigure.JsonMapperBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,12 +29,5 @@ public class JacksonConfig {
             module.addSerializer(BigDecimal.class, new BigDecimalSerializer());
             builder.addModule(module);
         };
-    }
-
-    @Bean
-    public ModelResolver modelResolver() {
-        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
-        mapper.setPropertyNamingStrategy(com.fasterxml.jackson.databind.PropertyNamingStrategies.SNAKE_CASE);
-        return new ModelResolver(mapper);
     }
 }

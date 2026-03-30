@@ -27,6 +27,8 @@ public class Cliente {
      * Calcula a idade do cliente baseado na data de nascimento
      */
     public int calcularIdade() {
-        return Period.between(this.dataNascimento, LocalDate.now()).getYears();
+         
+       return  Period.between(this.dataNascimento, LocalDate.now()).getYears();
+    
     }
 }
