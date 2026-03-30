@@ -496,8 +496,8 @@ Filtra cartões baseado na **idade do cliente**.
 
 | Faixa Etária | Cartões Elegíveis |
 |-------------|-------------------|
-| 18-24 anos | ✓ `CARTAO_SEM_ANUIDADE` |
-| ≥ 25 anos | ✓ Todos os 3 cartões |
+| 19-24 anos | ✓ `CARTAO_SEM_ANUIDADE` |
+| 18 ou ≥ 25 anos | ✓ Todos os 3 cartões |
 
 **Exemplo:**
 - Cliente com 22 anos → apenas cartão sem anuidade
@@ -523,8 +523,8 @@ Aplica regras **específicas do estado** (São Paulo tem politica especial).
 
 #### São Paulo (SP)
 ```
-Se idade 25-29: ✓ Todos os 3 cartões
-Se idade < 25:  ✓ CARTAO_SEM_ANUIDADE apenas
+Se idade 26-29: ✓ Todos os 3 cartões
+Se idade ≤ 25:  ✓ CARTAO_SEM_ANUIDADE + CARTAO_COM_CASHBACK
 Se idade ≥ 30:  ✓ CARTAO_SEM_ANUIDADE + CARTAO_COM_CASHBACK
                   (remove CARTAO_DE_PARCEIROS)
 ```
@@ -709,7 +709,7 @@ O projeto possui **8 test suites** cobrindo todas as camadas:
 | `CartoesControllerTest` | REST endpoint | 200, 204, 400, 422, 500 |
 | `CartaoServiceTest` | Orquestração | Happy path, erros |
 | `ElegibilidadeServiceTest` | Encadeamento de regras | Sequência, vazios |
-| `RegraPorIdadeTest` | Idade | 18-24, 25+, limites |
+| `RegraPorIdadeTest` | Idade | 19-24, 18, 25+, limites |
 | `RegraPorRendaTest` | Renda | Mínimos, 3 cartões |
 | `RegraPorUFTest` | Estado | SP especial, outros |
 | `ValidacaoClienteServiceTest` | Validações | CPF, UF, idade, renda |
