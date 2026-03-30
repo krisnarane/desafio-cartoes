@@ -23,6 +23,10 @@
 - [Troubleshooting](#troubleshooting)
 - [Referência de Erros](#referência-de-erros)
 
+### Documentacao Complementar
+- [ARQUITETURA.md](ARQUITETURA.md) - Diagramas UML de fluxo e classes
+- [CONSIDERACOES.md](CONSIDERACOES.md) - Decisoes, reflexoes e sugestoes de evolucao
+
 ---
 
 ## 🎯 Visão Geral
