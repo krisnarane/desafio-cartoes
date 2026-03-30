@@ -65,7 +65,6 @@ class ElegibilidadeServiceTest {
         ResultadoElegibilidade resultado = service.processar(cliente);
 
         assertThat(resultado.getCartoesAprovados()).isEmpty();
-        assertThat(resultado.getMotivoRejeicao()).isNotBlank();
         verify(regra1, never()).aplicar(any(), anyList());
         verify(regra2, never()).aplicar(any(), anyList());
     }

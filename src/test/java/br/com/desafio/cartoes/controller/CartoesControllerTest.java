@@ -119,6 +119,17 @@ class CartoesControllerTest {
                 .build();
     }
 
+    // cliente válido sem cartões elegíveis, retorna 204
+    @Test
+    void given_clienteValidoSemCartoes_when_postCartoes_then_retorna204() throws Exception {
+        when(cartaoService.solicitar(any())).thenReturn(criarResponseSemCartoes());
+
+        mockMvc.perform(post("/cartoes")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(validRequestJson()))
+                .andExpect(status().isNoContent());
+    }
+
     // simulando POST para /cartoes com JSON válido, retorna 200
     @Test
     void given_clienteValido_when_postCartoes_then_retorna200ComCartoes() throws Exception {
@@ -134,16 +145,6 @@ class CartoesControllerTest {
                 .andExpect(jsonPath("$.cartoes_ofertados[0].status").value("APROVADO"));
     }
 
-    // cliente sem cartoes, retorna vazio 204
-    @Test
-    void given_clienteSemCartoes_when_postCartoes_then_retorna204() throws Exception {
-        when(cartaoService.solicitar(any())).thenReturn(criarResponseSemCartoes());
-
-        mockMvc.perform(post("/cartoes")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(validRequestJson()))
-                .andExpect(status().isNoContent());
-    }
 
     //testa campos faltando, retorna 400
     @Test
@@ -431,9 +432,9 @@ class CartoesControllerTest {
                 .andExpect(status().isOk());
     }
 
-    // testa renda zero é aceita (não é negativa)
+    // testa renda zero é aceita (não é negativa) mas retorna 204 por não atender elegibilidade
     @Test
-    void given_rendaZero_when_postCartoes_then_naoRetorna400() throws Exception {
+    void given_rendaZero_when_postCartoes_then_retorna204PorElegibilidade() throws Exception {
         when(cartaoService.solicitar(any())).thenReturn(criarResponseSemCartoes());
 
         String json = """

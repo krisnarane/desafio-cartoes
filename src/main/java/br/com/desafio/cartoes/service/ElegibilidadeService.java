@@ -37,7 +37,7 @@ public class ElegibilidadeService {
 
         if (cartoes.isEmpty()) {
             log.info("Nenhum cartão ativo encontrado para processar");
-            return resultado.comRejeicao("Nenhum cartão ativo disponível para oferta no momento.");
+            return resultado.comCartoes(List.of());
         }
 
         // Aplicar cada regra sucessivamente
@@ -58,7 +58,7 @@ public class ElegibilidadeService {
 
         if (cartoes.isEmpty()) {
             log.info("Cliente {} não elegível a nenhum cartão após aplicação das regras", cliente.getCpf());
-            return resultado.comRejeicao("Cliente não elegível a nenhum cartão disponível.");
+            return resultado.comCartoes(List.of());
         }
 
         log.info("Elegibilidade processada para {}: {} cartões aprovados",

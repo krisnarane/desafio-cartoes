@@ -73,11 +73,12 @@ class CartaoServiceTest {
     @Test
     void given_clienteSemCartoesElegiveis_when_solicitar_then_retornaListaVazia() {
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comRejeicao("Sem cartões elegíveis"));
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comCartoes(List.of()));
 
         SolicitacaoResponseDTO resultado = cartaoService.solicitar(clienteDTO);
 
         assertThat(resultado.getCartoesOfertados()).isEmpty();
+        assertThat(resultado.getNumeroSolicitacao()).isNotNull();
     }
 
     @Test
@@ -111,7 +112,7 @@ class CartaoServiceTest {
     @Test
     void given_clienteValido_when_solicitar_then_chamaServicosNaOrdemCorreta() {
         when(validacaoService.converterParaModelo(any())).thenReturn(cliente);
-        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comRejeicao("Sem cartões elegíveis"));
+        when(elegibilidadeService.processar(any())).thenReturn(new ResultadoElegibilidade().comCartoes(TestFactory.todosCartoes()));
 
         cartaoService.solicitar(clienteDTO);
 

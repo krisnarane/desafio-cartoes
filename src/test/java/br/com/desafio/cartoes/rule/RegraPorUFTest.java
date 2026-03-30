@@ -37,12 +37,16 @@ class RegraPorUFTest {
     }
 
     @Test
-    void given_clienteSP_idade25_when_aplicar_then_retornaTodos() {
+    void given_clienteSP_idade25_when_aplicar_then_removeParceiros() {
+        // Exceção SP é para idades MAIORES que 25 (exclusivo), portanto 25 ainda remove PARCEIROS
         Cliente cliente = TestFactory.criarCliente(25, "SP", new BigDecimal("8000"));
 
         List<CartaoOferta> resultado = regra.aplicar(cliente, todosCartoes);
 
-        assertThat(resultado).hasSize(3);
+        assertThat(resultado).hasSize(2);
+        assertThat(resultado)
+                .extracting(CartaoOferta::getTipoCartao)
+                .containsExactlyInAnyOrder(TipoCartao.CARTAO_SEM_ANUIDADE, TipoCartao.CARTAO_COM_CASHBACK);
     }
 
     @Test

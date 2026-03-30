@@ -25,13 +25,13 @@ class RegraPorIdadeTest {
     }
 
     @Test
-    void given_clienteIdade18_when_aplicar_then_retornaApenasSemAnuidade() {
+    void given_clienteIdade18_when_aplicar_then_retornaTodosCartoes() {
+        // Regra se aplica apenas a idades MAIORES que 18 (exclusivo), portanto 18 recebe todos
         Cliente cliente = TestFactory.criarCliente(18, "RJ", new BigDecimal("8000"));
 
         List<CartaoOferta> resultado = regra.aplicar(cliente, todosCartoes);
 
-        assertThat(resultado).hasSize(1);
-        assertThat(resultado.get(0).getTipoCartao()).isEqualTo(TipoCartao.CARTAO_SEM_ANUIDADE);
+        assertThat(resultado).hasSize(3);
     }
 
     @Test
@@ -81,14 +81,15 @@ class RegraPorIdadeTest {
     }
 
     @Test
-    void given_clienteIdade18_when_aplicar_then_removeCashbackEParceiros() {
+    void given_clienteIdade18_when_aplicar_then_naoRemoveCashbackNemParceiros() {
+        // Idade 18 não entra na restrição (regra é para idade > 18 e < 25)
         Cliente cliente = TestFactory.criarCliente(18, "RJ", new BigDecimal("8000"));
 
         List<CartaoOferta> resultado = regra.aplicar(cliente, todosCartoes);
 
         assertThat(resultado)
                 .extracting(CartaoOferta::getTipoCartao)
-                .doesNotContain(TipoCartao.CARTAO_COM_CASHBACK, TipoCartao.CARTAO_DE_PARCEIROS);
+                .contains(TipoCartao.CARTAO_COM_CASHBACK, TipoCartao.CARTAO_DE_PARCEIROS);
     }
 
     @Test
