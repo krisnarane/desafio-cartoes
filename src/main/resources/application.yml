@@ -4,6 +4,7 @@ spring:
   
   jackson:
     property-naming-strategy: SNAKE_CASE
+    default-property-inclusion: non_null
   
   datasource:
     url: jdbc:h2:mem:cartoes;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false

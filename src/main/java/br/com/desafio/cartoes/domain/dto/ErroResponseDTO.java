@@ -8,24 +8,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class CartaoResponseDTO {
+public class ErroResponseDTO {
     
-    @JsonProperty("tipo_cartao")
-    private String tipoCartao;
+    @JsonProperty("codigo")
+    private String codigo;
     
-    @JsonProperty("valor_anuidade_mensal")
-    private BigDecimal valorAnuidadeMensal;
+    @JsonProperty("mensagem")
+    private String mensagem;
     
-    @JsonProperty("valor_limite_disponivel")
-    private BigDecimal valorLimiteDisponivel;
-    
-    @JsonProperty("status")
-    private String status;
+    @JsonProperty("detalhe_erro")
+    private ErroDetalheDTO detalheErro;
 }

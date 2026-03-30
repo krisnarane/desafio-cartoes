@@ -1,6 +1,9 @@
 package br.com.desafio.cartoes.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,6 +17,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class ClienteRequestDTO {
     
     @NotBlank(message = "Nome é obrigatório")
@@ -21,6 +25,7 @@ public class ClienteRequestDTO {
     private String nome;
     
     @NotBlank(message = "CPF é obrigatório")
+    @Pattern(regexp = "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$|^\\d{11}$", message = "CPF deve estar formatado (123.456.789-10) ou conter 11 dígitos")
     @JsonProperty("cpf")
     private String cpf;
     
@@ -31,6 +36,7 @@ public class ClienteRequestDTO {
     
     @NotNull(message = "Data de nascimento é obrigatória")
     @PastOrPresent(message = "Data de nascimento não pode ser no futuro")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("data_nascimento")
     private LocalDate dataNascimento;
     
@@ -40,7 +46,7 @@ public class ClienteRequestDTO {
     private String uf;
     
     @NotNull(message = "Renda mensal é obrigatória")
-    @Positive(message = "Renda mensal deve ser maior que zero")
+    @PositiveOrZero(message = "Renda mensal não deve ser negativa")
     @JsonProperty("renda_mensal")
     private BigDecimal rendaMensal;
     

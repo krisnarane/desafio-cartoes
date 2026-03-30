@@ -1,0 +1,62 @@
+2026-03-30 00:00:25.236 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 31.665 seconds (process running for 43.61)
+2026-03-30 00:09:09.900 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication v0.0.1-SNAPSHOT using Java 17.0.18 with PID 1 (/app/app.jar started by root in /app)
+2026-03-30 00:09:09.935 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-30 00:09:09.947 [main] INFO  b.c.d.cartoes.CartoesApplication - The following 1 profile is active: "dev"
+2026-03-30 00:12:07.384 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 182.904 seconds (process running for 187.34)
+2026-03-29 21:14:12.104 [main] INFO  b.c.d.c.CartoesApplicationTests - Starting CartoesApplicationTests using Java 17.0.15 with PID 21132 (started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-29 21:14:12.165 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-29 21:14:12.170 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 21:34:13.978 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 35360 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-29 21:34:13.980 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-29 21:34:13.982 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 21:34:35.216 [main] INFO  b.c.d.cartoes.CartoesApplication - Starting CartoesApplication using Java 21.0.7 with PID 22648 (C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes\target\classes started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-29 21:34:35.217 [main] DEBUG b.c.d.cartoes.CartoesApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-29 21:34:35.218 [main] INFO  b.c.d.cartoes.CartoesApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 21:34:52.611 [main] INFO  b.c.d.cartoes.CartoesApplication - Started CartoesApplication in 44.528 seconds (process running for 47.152)
+2026-03-29 21:35:02.286 [http-nio-8080-exec-2] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-29 21:35:02.287 [http-nio-8080-exec-2] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-29 21:35:02.287 [http-nio-8080-exec-2] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-29 21:35:02.290 [http-nio-8080-exec-2] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-10 passou com sucesso
+2026-03-29 21:35:02.295 [http-nio-8080-exec-2] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 123.456.789-10
+2026-03-29 21:35:03.027 [http-nio-8080-exec-2] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-29 21:35:03.028 [http-nio-8080-exec-2] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorIdade aplicada: 3 → 3 cartões
+2026-03-29 21:35:03.032 [http-nio-8080-exec-2] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorRenda aplicada: 3 → 1 cartões
+2026-03-29 21:35:03.032 [http-nio-8080-exec-2] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorUF aplicada: 1 → 1 cartões
+2026-03-29 21:35:03.032 [http-nio-8080-exec-2] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 123.456.789-10: 1 cartões aprovados
+2026-03-29 21:35:03.048 [http-nio-8080-exec-2] INFO  b.c.d.cartoes.service.CartaoService - Solicitação ab3085d8-1af6-4316-a38b-9b47f247c478 salva no banco de dados para CPF: 123.456.789-10 com 1 cartões aprovados
+2026-03-29 21:35:03.049 [http-nio-8080-exec-2] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-29 21:35:17.687 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-29 21:35:17.687 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-29 21:35:17.687 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-29 21:35:17.687 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-10 passou com sucesso
+2026-03-29 21:35:17.687 [http-nio-8080-exec-4] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 123.456.789-10
+2026-03-29 21:35:17.689 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-29 21:35:17.690 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorIdade aplicada: 3 → 3 cartões
+2026-03-29 21:35:17.690 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorRenda aplicada: 3 → 1 cartões
+2026-03-29 21:35:17.690 [http-nio-8080-exec-4] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorUF aplicada: 1 → 1 cartões
+2026-03-29 21:35:17.691 [http-nio-8080-exec-4] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 123.456.789-10: 1 cartões aprovados
+2026-03-29 21:35:17.694 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Solicitação fbecc75a-6f1a-40ee-89d2-4b1002099391 salva no banco de dados para CPF: 123.456.789-10 com 1 cartões aprovados
+2026-03-29 21:35:17.695 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-29 21:38:31.275 [http-nio-8080-exec-1] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-29 21:38:31.278 [http-nio-8080-exec-1] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-29 21:38:31.279 [http-nio-8080-exec-1] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-29 21:38:31.281 [http-nio-8080-exec-1] DEBUG b.c.d.c.s.ValidacaoClienteService - Validação do cliente 123.456.789-10 passou com sucesso
+2026-03-29 21:38:31.282 [http-nio-8080-exec-1] INFO  b.c.d.c.service.ElegibilidadeService - Processando elegibilidade do cliente: 123.456.789-10
+2026-03-29 21:38:31.433 [http-nio-8080-exec-1] DEBUG b.c.d.c.service.ElegibilidadeService - Cartões carregados: 3
+2026-03-29 21:38:31.436 [http-nio-8080-exec-1] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorIdade aplicada: 3 → 3 cartões
+2026-03-29 21:38:31.438 [http-nio-8080-exec-1] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorRenda aplicada: 3 → 1 cartões
+2026-03-29 21:38:31.439 [http-nio-8080-exec-1] DEBUG b.c.d.c.service.ElegibilidadeService - Regra RegraPorUF aplicada: 1 → 1 cartões
+2026-03-29 21:38:31.440 [http-nio-8080-exec-1] INFO  b.c.d.c.service.ElegibilidadeService - Elegibilidade processada para 123.456.789-10: 1 cartões aprovados
+2026-03-29 21:38:31.499 [http-nio-8080-exec-1] INFO  b.c.d.cartoes.service.CartaoService - Solicitação b290098e-7864-4c80-bdfc-e7f8fd925267 salva no banco de dados para CPF: 123.456.789-10 com 1 cartões aprovados
+2026-03-29 21:38:31.500 [http-nio-8080-exec-1] INFO  b.c.d.c.controller.CartoesController - Cartões encontrados para CPF 123.456.789-10: 1 cartões - retornando 200
+2026-03-29 21:38:47.794 [http-nio-8080-exec-2] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-29 21:39:11.669 [http-nio-8080-exec-4] INFO  b.c.d.c.controller.CartoesController - POST /cartoes recebido para CPF: 123.456.789-10
+2026-03-29 21:39:11.669 [http-nio-8080-exec-4] INFO  b.c.d.cartoes.service.CartaoService - Iniciando processamento de solicitação para CPF: 123.456.789-10
+2026-03-29 21:39:11.730 [http-nio-8080-exec-4] DEBUG b.c.d.c.s.ValidacaoClienteService - Iniciando validação do cliente: 123.456.789-10
+2026-03-29 21:39:11.793 [http-nio-8080-exec-4] WARN  b.c.d.c.s.ValidacaoClienteService - Idade incoerente: informada 25, calculada 16
+2026-03-29 21:39:12.038 [http-nio-8080-exec-4] WARN  b.c.d.c.e.GlobalExceptionHandler - Regra de negócio violada: IDADE_INCOERENTE - Idade informada não corresponde à data de nascimento
+2026-03-29 21:39:33.882 [http-nio-8080-exec-5] WARN  b.c.d.c.e.GlobalExceptionHandler - Erro de validação de entrada detectado
+2026-03-29 21:40:42.604 [main] INFO  b.c.d.c.CartoesApplicationTests - Starting CartoesApplicationTests using Java 17.0.15 with PID 11592 (started by jukia in C:\Users\jukia\OneDrive\Desktop\DesafioItau\cartoes\cartoes)
+2026-03-29 21:40:42.612 [main] DEBUG b.c.d.c.CartoesApplicationTests - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-29 21:40:42.619 [main] INFO  b.c.d.c.CartoesApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 21:41:10.088 [main] INFO  b.c.d.c.CartoesApplicationTests - Started CartoesApplicationTests in 29.592 seconds (process running for 46.169)
